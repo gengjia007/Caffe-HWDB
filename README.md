@@ -53,7 +53,7 @@ print(tag.__len__())
 
 files=os.listdir(IMG_PATH)
 n=0
-f=open("label.txt","w")
+f=open("label.txt","w") #创建用于训练的标签文件
 for file in files:
     files_d=os.listdir(IMG_PATH+"/"+file)
     for file1 in files_d:
@@ -65,3 +65,6 @@ for file in files:
 
 每个目录下有120张训练手写图片:
 ![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/p_img.png)
+
+查看label文件：
+![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/p_label.png)
