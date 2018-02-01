@@ -13,7 +13,7 @@ training HWDB1.1 with Caffe
 
 ### 解析数据集：
 下载的数据集并非图片格式，而是gnt的自定义文件类型，官网给出的gnt文件格式如下：
-  
+![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/gnt_format.png)
 这里我们写一个python脚本，将文件里的tag code与bitmap解析转化为对应的标签与图片：
 ```python
 #coding=utf-8
