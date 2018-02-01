@@ -60,4 +60,8 @@ for file in files:
         f.write(file+"/"+file1+" "+str(n)+"\n")
     n=n+1
 ```
-一杯coffee的时间执行完毕后，查看解析出的图片：
+一杯coffee的时间执行完毕后，查看目录：
+![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/p_dir.png)
+
+每个目录下有120张训练手写图片:
+![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/p_img.png)
