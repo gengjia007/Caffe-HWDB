@@ -75,32 +75,34 @@ caffe训练之前要将图片数据转化为lmdb或者leveldb，现主要为lmdb
 
 convert_imageset [FLAGS] ROOTFOLDER/ LABELFILE DB_NAME  
 
-其中ROOTFOLDER为图片集的根目录
-LABELFILE为对应的标签文件
-DB_NAME为生成lmdb的根目录
+    ROOTFOLDER为图片集的根目录
+    LABELFILE为对应的标签文件
+    DB_NAME为生成lmdb的根目录
 
 另外还有一些可选参数：
 
-gray：bool类型，默认为false，如果设置为true，则代表将图像当做灰度图像来处理，否则当做彩色图像来处理
+    gray：bool类型，默认为false，如果设置为true，则代表将图像当做灰度图像来处理，否则当做彩色图像来处理
 
-shuffle：bool类型，默认为false，如果设置为true，则代表将图像集中的图像的顺序随机打乱
+    shuffle：bool类型，默认为false，如果设置为true，则代表将图像集中的图像的顺序随机打乱
 
-backend：string类型，可取的值的集合为{"lmdb", "leveldb"}，默认为"lmdb"，代表采用何种形式来存储转换后的数据
+    backend：string类型，可取的值的集合为{"lmdb", "leveldb"}，默认为"lmdb"，代表采用何种形式来存储转换后的数据
 
-resize_width：int32的类型，默认值为0，如果为非0值，则代表图像的宽度将被resize成resize_width
+    resize_width：int32的类型，默认值为0，如果为非0值，则代表图像的宽度将被resize成resize_width
 
-resize_height：int32的类型，默认值为0，如果为非0值，则代表图像的高度将被resize成resize_height
+    resize_height：int32的类型，默认值为0，如果为非0值，则代表图像的高度将被resize成resize_height
 
-check_size：bool类型，默认值为false，如果该值为true，则在处理数据的时候将检查每一条数据的大小是否相同
+    check_size：bool类型，默认值为false，如果该值为true，则在处理数据的时候将检查每一条数据的大小是否相同
 
-encoded：bool类型，默认值为false，如果为true，代表将存储编码后的图像，具体采用的编码方式由参数encode_type指定
+    encoded：bool类型，默认值为false，如果为true，代表将存储编码后的图像，具体采用的编码方式由参数encode_type指定
 
-encode_type：string类型，默认值为""，用于指定用何种编码方式存储编码后的图像，取值为编码方式的后缀（如'png','jpg',...)
+    encode_type：string类型，默认值为""，用于指定用何种编码方式存储编码后的图像，取值为编码方式的后缀（如'png','jpg',...)
 
 生成lmdb：
 ```bash
 sudo /home/gengjia/caffe/build/tools/convert_imageset --resize_height 96 --resize_width 96 /media/gengjia/DATA/PycharmProjects/HWDB/IMG/ /media/gengjia/DATA/PycharmProjects/HWDB/label.txt /media/gengjia/DATA/PycharmProjects/HWDB/train_lmdb/
 ```
 脚本执行完后进入目录查看lmdb：
+
 ![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/lmdb.png)
+
 到此用于训练的lmdb文件完成.......
