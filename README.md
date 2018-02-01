@@ -80,6 +80,7 @@ LABELFILE为对应的标签文件
 DB_NAME为生成lmdb的根目录
 
 另外还有一些可选参数：
+
 gray：bool类型，默认为false，如果设置为true，则代表将图像当做灰度图像来处理，否则当做彩色图像来处理
 
 shuffle：bool类型，默认为false，如果设置为true，则代表将图像集中的图像的顺序随机打乱
