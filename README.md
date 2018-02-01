@@ -101,3 +101,6 @@ encode_type：string类型，默认值为""，用于指定用何种编码方式�
 ```bash
 sudo /home/gengjia/caffe/build/tools/convert_imageset --resize_height 96 --resize_width 96 /media/gengjia/DATA/PycharmProjects/HWDB/IMG/ /media/gengjia/DATA/PycharmProjects/HWDB/label.txt /media/gengjia/DATA/PycharmProjects/HWDB/train_lmdb/
 ```
+脚本执行完后进入目录查看lmdb：
+![](https://github.com/gengjia007/Caffe-HWDB/blob/master/img/lmdb.png)
+到此用于训练的lmdb文件完成.......
